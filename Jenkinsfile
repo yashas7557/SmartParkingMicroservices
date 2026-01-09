@@ -27,8 +27,11 @@ pipeline {
 
         stage('Run Containers') {
             steps {
-                echo '🚀 Starting containers'
-                sh 'docker compose up -d'
+                echo '♻️ Recreating containers safely'
+                sh '''
+                    docker compose down || true
+                    docker compose up -d
+                '''
             }
         }
     }
