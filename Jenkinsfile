@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven'
-    }
-
     stages {
 
         stage('Checkout Code') {
@@ -16,18 +12,21 @@ pipeline {
 
         stage('Build Microservices') {
             steps {
+                echo '🔨 Building all microservices using parent POM'
                 sh 'mvn clean package -DskipTests'
             }
         }
 
         stage('Build Docker Images') {
             steps {
+                echo '🐳 Building Docker images'
                 sh 'docker compose build'
             }
         }
 
         stage('Run Containers') {
             steps {
+                echo '🚀 Starting containers'
                 sh 'docker compose up -d'
             }
         }
