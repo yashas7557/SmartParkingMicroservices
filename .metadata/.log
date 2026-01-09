@@ -602,3 +602,235 @@ Binding(COMMAND+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2026-01-09 11:18:57.127
+!MESSAGE failed to load maven project for org.eclipse.ui.ide.FileStoreEditorInput@fd4b0bdb
+!STACK 1
+org.eclipse.core.runtime.CoreException: Can't read Maven project
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.readExternalMavenProject(SelectionUtil.java:299)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:265)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:709)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1029)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+ for project  at /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+ for project  at /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:180)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:123)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readMavenProject(IMavenToolbox.java:97)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.lambda$0(SelectionUtil.java:284)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.readExternalMavenProject(SelectionUtil.java:282)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:265)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:709)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1029)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:176)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:600)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:257)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:243)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:176)
+	... 11 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 4 2026-01-09 11:18:57.131
+!MESSAGE Can't read Maven project
+!SUBENTRY 2 org.eclipse.m2e.core.ui 4 0 2026-01-09 11:18:57.131
+!MESSAGE 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+ for project  at /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+ for project  at /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:180)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:123)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readMavenProject(IMavenToolbox.java:97)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.lambda$0(SelectionUtil.java:284)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.readExternalMavenProject(SelectionUtil.java:282)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:265)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:709)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1029)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/yashassay/Documents/SmartParkingMicroservices/pom.xml: input contained no data @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:176)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:600)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:257)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:243)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:176)
+	... 11 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:18:57.355
+!MESSAGE -2
+!STACK 0
+org.eclipse.jface.text.BadLocationException: -2
+	at org.eclipse.jface.text.TreeLineTracker.nodeByLine(TreeLineTracker.java:302)
+	at org.eclipse.jface.text.TreeLineTracker.getLineLength(TreeLineTracker.java:1106)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineLength(AbstractLineTracker.java:240)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.getLineLength(BasicStructuredDocument.java:1486)
+	at org.eclipse.lsp4e.LSPEclipseUtils.getLineLength(LSPEclipseUtils.java:211)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toOffset(LSPEclipseUtils.java:204)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.lambda$8(LSPDiagnosticsToMarkers.java:123)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.updateEditorAnnotations(LSPDiagnosticsToMarkers.java:121)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.lambda$6(LSPDiagnosticsToMarkers.java:101)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1707)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.accept(LSPDiagnosticsToMarkers.java:101)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.accept(LSPDiagnosticsToMarkers.java:1)
+	at org.eclipse.lsp4e.LanguageClientImpl.publishDiagnostics(LanguageClientImpl.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:18:57.393
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	... 11 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:18:57.845
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	... 11 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:19:17.518
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	... 11 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:19:20.463
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	... 11 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-09 11:19:22.074
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:310)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	... 11 more
