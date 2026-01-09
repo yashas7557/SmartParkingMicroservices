@@ -27,9 +27,9 @@ pipeline {
 
         stage('Deploy Containers') {
             steps {
-                echo '♻️ Restarting containers safely'
+                echo '♻️ Deploying clean containers'
                 sh '''
-                  docker compose down
+                  docker compose down --remove-orphans
                   docker compose up -d
                 '''
             }
