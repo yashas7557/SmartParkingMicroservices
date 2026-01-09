@@ -12,8 +12,9 @@ pipeline {
 
         stage('Build Microservices') {
             steps {
-                echo '🔨 Building all microservices using parent POM'
-                sh 'mvn clean package -DskipTests'
+                echo '🔨 Building using Maven Wrapper'
+                sh 'chmod +x mvnw'
+                sh './mvnw clean package -DskipTests'
             }
         }
 
