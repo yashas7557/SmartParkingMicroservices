@@ -1,0 +1,5 @@
+package com.shanInfotech.Smartparking.controller;
+
+public class TicketController {
+
+}

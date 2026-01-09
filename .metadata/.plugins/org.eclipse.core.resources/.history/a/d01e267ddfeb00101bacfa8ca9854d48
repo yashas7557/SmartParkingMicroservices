@@ -1,0 +1,5 @@
+package com.shanInfotech.Smartparking.enums;
+
+public enum PaymentStatus {
+
+}

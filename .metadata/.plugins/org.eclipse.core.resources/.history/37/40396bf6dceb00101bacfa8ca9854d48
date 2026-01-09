@@ -1,0 +1,5 @@
+package com.shanInfotech.Smartparking.dto;
+
+public class TicketDto {
+
+}

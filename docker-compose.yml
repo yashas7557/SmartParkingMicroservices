@@ -1,0 +1,64 @@
+services:
+
+  # ---------------- MYSQL ----------------
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: parking_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # ---------------- EUREKA SERVER ----------------
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+
+  # ---------------- API GATEWAY ----------------
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8181:8181"
+    depends_on:
+      - eureka-server
+
+  # ---------------- VEHICLE SERVICE ----------------
+  vehicle-service:
+    build: ./vehicle-service
+    container_name: vehicle-service
+    depends_on:
+      - mysql
+      - eureka-server
+
+  # ---------------- PARKING SLOT SERVICE ----------------
+  parking-slot-service:
+    build: ./parking-slot-service
+    container_name: parking-slot-service
+    depends_on:
+      - mysql
+      - eureka-server
+
+  # ---------------- TICKET SERVICE ----------------
+  ticket-service:
+    build: ./ticket-service
+    container_name: ticket-service
+    depends_on:
+      - mysql
+      - eureka-server
+
+  # ---------------- PAYMENT SERVICE ----------------
+  payment-service:
+    build: ./payment-service
+    container_name: payment-service
+    depends_on:
+      - mysql
+      - eureka-server
+
+volumes:
+  mysql_data:

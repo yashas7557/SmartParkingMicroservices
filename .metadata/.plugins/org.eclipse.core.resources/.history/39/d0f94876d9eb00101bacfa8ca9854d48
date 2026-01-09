@@ -1,0 +1,5 @@
+package com.shanInfotech.Smartparking.service;
+
+public class ParkingService {
+
+}

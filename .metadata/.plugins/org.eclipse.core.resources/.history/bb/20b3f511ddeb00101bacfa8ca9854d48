@@ -1,0 +1,5 @@
+package com.shanInfotech.Smartparking.repository;
+
+public class TicketRepository {
+
+}
