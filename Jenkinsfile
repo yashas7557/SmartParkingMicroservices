@@ -12,25 +12,18 @@ pipeline {
 
         stage('Build Microservices') {
             steps {
-                echo '🔨 Building using Maven Wrapper'
-                sh 'chmod +x mvnw'
-                sh './mvnw clean package -DskipTests'
-            }
-        }
-
-        stage('Build Docker Images') {
-            steps {
-                echo '🐳 Building Docker images'
-                sh 'docker compose build'
-            }
-        }
-
-        stage('Deploy Containers') {
-            steps {
-                echo '♻️ Deploying clean containers'
                 sh '''
-                  docker compose down --remove-orphans
-                  docker compose up -d
+                  chmod +x mvnw
+                  ./mvnw clean package -DskipTests
+                '''
+            }
+        }
+
+        stage('Deploy with Docker Compose') {
+            steps {
+                sh '''
+                  docker compose down || true
+                  docker compose up -d --build
                 '''
             }
         }
@@ -38,10 +31,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Smart Parking CI/CD Pipeline Successful'
+            echo '✅ Deployment Successful'
         }
         failure {
-            echo '❌ Pipeline Failed'
+            echo '❌ Deployment Failed'
         }
     }
 }
