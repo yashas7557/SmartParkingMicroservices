@@ -20,15 +20,15 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-                echo '🐳 Building Docker images'
-                sh 'docker compose build'
+                echo 'Building Docker images'
+                sh 'docker-compose build'
             }
         }
 
         stage('Run Containers') {
             steps {
-                echo '🚀 Starting containers'
-                sh 'docker compose up -d'
+                echo 'Starting containers'
+                sh 'docker-compose up -d'
             }
         }
     }
